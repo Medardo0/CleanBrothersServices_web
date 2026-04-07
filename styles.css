@@ -549,7 +549,9 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  padding: 0 1rem;
 }
+
 
 .intervention-card {
   border-radius: 20px;
@@ -885,5 +887,11 @@ p {
 
   .floating-whatsapp {
     display: inline-flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .interventions-grid {
+    grid-template-columns: 1fr;
   }
 }
