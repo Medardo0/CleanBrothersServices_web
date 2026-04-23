@@ -37,16 +37,6 @@ if (revealElements.length) {
   revealElements.forEach((element) => observer.observe(element));
 }
 
-const fileInput = document.querySelector("#client_file");
-const fileName = document.querySelector("#file-name");
-
-if (fileInput && fileName) {
-  fileInput.addEventListener("change", () => {
-    fileName.textContent = fileInput.files.length
-      ? `Fichier sélectionné : ${fileInput.files[0].name}`
-      : "Aucun fichier sélectionné";
-  });
-}
 
 const form = document.querySelector("#quote-form");
 const submitButton = document.querySelector("#submit-button");
@@ -54,7 +44,7 @@ const statusMessage = document.querySelector("#form-status");
 
 if (form && submitButton && statusMessage) {
   emailjs.init({
-    publicKey: "YOUR_PUBLIC_KEY",
+    publicKey: "jItjSvJQK07ON26IW",
   });
 
   form.addEventListener("submit", async (event) => {
@@ -68,8 +58,8 @@ if (form && submitButton && statusMessage) {
 
     try {
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_hnqc2fg",
+        "template_welzyph",
         form
       );
 
@@ -78,9 +68,6 @@ if (form && submitButton && statusMessage) {
       statusMessage.classList.add("success");
       form.reset();
 
-      if (fileName) {
-        fileName.textContent = "Aucun fichier sélectionné";
-      }
     } catch (error) {
       console.error("EmailJS error:", error);
       statusMessage.textContent =
