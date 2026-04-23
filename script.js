@@ -58,7 +58,7 @@ if (form && submitButton && statusMessage) {
 
     try {
       await emailjs.sendForm(
-        "service_hnqc2fg",
+        "service_81z93ek",
         "template_welzyph",
         form
       );
