@@ -695,6 +695,25 @@ p {
   color: #be1f1f;
 }
 
+.form-note-box {
+  background: rgba(17, 143, 156, 0.08);
+  border: 1px solid rgba(17, 143, 156, 0.14);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+.form-note a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .contact-side {
   display: grid;
   gap: 1rem;
